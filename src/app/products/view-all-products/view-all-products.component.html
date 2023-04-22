@@ -1,0 +1,81 @@
+<div class="container w-100 mt-4">
+    <div class="container row text-center">
+
+        <div  id="p1" class="p-2 col-2 shrink">
+            <a (click)="filter('')">
+                <img style="height: 218px; width: 50%;" class="w-100 rounded-circle"
+                    src="https://i.postimg.cc/sX6FNxbF/Garden.jpg" alt="">
+                <h4>View all</h4>
+            </a>
+        </div>
+
+
+        <div id="p1" class="p-2 col-2 shrink">
+            <a (click)="filter(1)">
+                <img style="height: 218px; width: 50%;" class="w-100 rounded-circle"
+                    src="https://i.postimg.cc/hGF5BW0h/indoor.jpg" alt="">
+                <h4>Indoor plants</h4>
+            </a>
+        </div>
+        <div id="p1" class="p-2 col-2 shrink">
+            <a (click)="filter(2)">
+                <img style="height: 218px; width: 75%;" class="w-100 rounded-circle"
+                    src="https://i.postimg.cc/1XzWH9y7/outdoor.jpg" alt="">
+                <h4>Outdoor plants</h4>
+
+            </a>
+        </div>
+        <div id="p1" class="p-2 col-2 shrink">
+            <a (click)="filter(3)">
+                <img style="height: 218px;width: 75%" class="w-100 rounded-circle"
+                    src="https://i.postimg.cc/LsBNFqX0/flowering.jpg" alt="">
+                <h4>Flowering plants</h4>
+
+            </a>
+        </div>
+        <div id="p1" class="p-2 col-2 shrink">
+            <a (click)="filter(5)">
+                <img style="height: 218px;width: 75%" class="w-100 rounded-circle"
+                    src="https://i.postimg.cc/vmncMFbS/seeds.jpg" alt="">
+            </a>
+            <h4>Seeds</h4>
+        </div>
+        <div id="p1" class="p-2 col-2 shrink">
+            <a (click)="filter(4)">
+                <img style="height: 218px;width: 75%" class="w-100 rounded-circle"
+                    src="https://i.postimg.cc/QdbjV29B/planters.jpg" alt="">
+                <h4>Gardening tools</h4>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+<section class="py-2">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div *ngFor="let i of filterProducts | filter: searchKey:'title'" class="col mb-5">
+                <div id="d1" class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="{{i.productImage}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{i.title}}</h5>
+                            <!-- Product price-->
+                            {{i.price}} Rs
+                            <p>Rating <strong>{{i.rating}}</strong></p>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                href="products/view_product/{{i.id}}">View</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

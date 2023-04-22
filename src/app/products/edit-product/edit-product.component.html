@@ -1,0 +1,19 @@
+<div class="p-5 container w-50 text-center">
+    <h1 style="color: rgb(17, 186, 17) ;">Edit product</h1>
+    <form (ngSubmit)="updateProduct(updateProductForm)"#updateProductForm="ngForm" action="" class="container p-5 "style=" background-color: rgba(17, 186, 17, 0.705) ;">
+        <input [(ngModel)]="pData.id" type="text" class="form-control mt-3 p-2" placeholder="Id" name="pin" id="pid">
+        <input [(ngModel)]="pData.title" type="text" class="form-control mt-3 p-2" placeholder="Name" name="pin1" id="pname">
+        <input [(ngModel)]="pData.catogoryId" type="text" class="form-control mt-3 p-2" placeholder="Category Id" name="pin2" id="pcat">
+        <input [(ngModel)]="pData.productImage" type="text" class="form-control mt-3 p-2" placeholder="productImage" name="pin6" id="pimg">
+        <input [(ngModel)]="pData.description" type="text" class="form-control mt-3 p-2" placeholder="Description" name="pin3" id="pdes">
+        <input [(ngModel)]="pData.price" type="text" class="form-control mt-3 p-2" placeholder="price" name="pin4" id="pprice">
+        <input [(ngModel)]="pData.isAvailable" type="text" class="form-control mt-3 p-2" placeholder="Isavailable" name="pin5" id="pavail">
+        <input [(ngModel)]="pData.rating" type="text" class="form-control mt-3 p-2" placeholder="Rating" name="pin6" id="prat">
+        <input [(ngModel)]="pData.review" type="text" class="form-control mt-3 p-2" placeholder="Review" name="pin7" id="priv">
+        <input [(ngModel)]="pData.warrenty" type="text" class="form-control mt-3 p-2" placeholder="Warrenty" name="pin8" id="pwar">
+        <button class="btn btn-outline-success mt-3 p-2" type="submit">
+            <i style="color: rgb(17, 186, 17) ; " class="bi-cart-fill mt-3"></i> Update
+        </button>
+    </form>
+
+</div>

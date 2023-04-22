@@ -1,0 +1,31 @@
+#d1{
+    transition: 1s ease-in-out;
+}
+
+
+#d1:hover
+{
+    box-shadow: 5px 4px 8px 4px rgba(0, 0, 0, 0.50);
+    transform: scale(1.1);
+}
+
+/* #p1{
+    background-color: white;
+}
+
+#p1:hover{
+    
+    background-color:  rgb(17, 186, 17);
+
+} */
+
+.shrink img {
+  transition: 1s ease;
+  }
+  
+  .shrink img:hover{
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  transition: 1s ease;
+  }
